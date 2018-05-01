@@ -84,7 +84,7 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-cache-control.php';
 		'#^/about/?#',
 	  );
 	  
-	  // Loop through the patterns.
+	  // Loop through the patterns..
 	  foreach ($regex_path_patterns as $regex_path_pattern) {
 		if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
 		  add_action( 'send_headers', 'add_header_nocache', 15 );
